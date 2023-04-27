@@ -61,7 +61,7 @@ public class myDate {
 			}
 			// Feb logic starts here
 			if (this.month == 2) {
-				if (this.day >= 30) {
+				if (this.day >= 29) {
 					this.day = 29;
 				} else if (this.day < 1) {
 					this.day = 1;
@@ -69,10 +69,11 @@ public class myDate {
 					this.day = 1;
 			}
 		} else if (this.month == 2)
-			this.day = 28;
-		else if (this.day < 1) {
-			this.day = 1;
-		}
+			if (this.day >= 28) {
+				this.day = 28;
+			} else if (this.day < 1) {
+				this.day = 1;
+			}
 
 	}
 
